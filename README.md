@@ -30,6 +30,7 @@
 - Thymeleaf
 - Spring Web
 - Spring Boot DevTools
+
 ## Demo
 
 Insert gif or link to demo

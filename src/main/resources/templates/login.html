@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org "
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<section class="banner ">
+
+		<div class="px-4 py-5 px-md-5 text-center text-lg-start">
+			<div class="container">
+				<div class="row gx-lg-5 align-items-center">
+					<div class="col-lg-6 mb-5 mb-lg-0">
+						<h1 class="my-5  fw-bold ls-tight">
+							Patients is our <br /> <span class="text-primary fw-bold">Priority</span>
+						</h1>
+						<p class="text-white fs-5">A healthcare institution providing
+							patient treatment with specialized health science and auxiliary
+							healthcare staff and medical equipment.</p>
+					</div>
+
+					<div class="col-lg-6 mb-5 mb-lg-0">
+
+						<div class="card ">
+							<div
+								class="card-header text-center fs-3  text-dark  bg-primary bg-gradient fw-bold">Login</div>
+
+							<div th:if="${param.error}" class=" alert-danger text-center">
+								Invalid username or password</div>
+
+							<div th:if="${param.logout}" class=" alert-success text-center">
+								Logout Successful</div>
+							<div class="card-body py-5 px-md-5 text-dark  ">
+
+
+								<form th:action="@{/userLogin}" method="post">
+									<!-- 2 column grid layout with text inputs for the first and last names -->
+
+									<!-- Email input -->
+									<div class="form-outline mb-5">
+										<!-- <label class="form-label " for="form3Example3">Email address</label> -->
+										<input type="email" id="form3Example3" class="form-control"
+											placeholder="Email address" name="username" />
+
+									</div>
+
+									<!-- Password input -->
+									<div class="form-outline mb-5">
+										<!-- <label class="form-label" for="form3Example4">Password</label> -->
+										<input type="password" id="form3Example4" class="form-control"
+											placeholder="Password" name="password" />
+
+									</div>
+
+
+
+									<!-- Submit button -->
+									<button type="submit"
+										class="btn btn-primary btn-block mb-4 col-lg-12 ">
+										Sign In</button>
+									<div class="text-center bg-body-secondary mt-2 mb-2">
+										If You Are New Here Please Register Yourself First <a
+											class="ms-2 fs-5" th:href="@{/register}"> <strong>Register!!</strong>
+										</a>
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</section>
+
+
+</body>
+</html>

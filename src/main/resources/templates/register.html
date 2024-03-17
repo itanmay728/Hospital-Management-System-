@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org "
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<section class="banner">
+
+		<div class="px-4 py-5 px-md-5 text-center text-lg-start">
+			<div class="container">
+				<div class="row gx-lg-5 align-items-center">
+					<div class="col-lg-5 mb-5 mb-lg-0">
+						<h1 class="my-5  fw-bold ls-tight">
+							Patients is our <br /> <span class="text-primary fw-bold">Priority</span>
+						</h1>
+						<p class="text-white fs-5">A healthcare institution providing
+							patient treatment with specialized health science and auxiliary
+							healthcare staff and medical equipment.</p>
+					</div>
+
+					<div class="col-lg-7 mb-5 mb-lg-0">
+
+
+						<div class="card ">
+							<div
+								class="card-header text-center fs-3  text-dark  bg-body-secondary bg-gradient fw-bold">Register</div>
+
+							<div class="register-photo">
+								<div class="form-container">
+									<div class="image-holder"></div>
+									<form method="post">
+										<h2 class="text-center">
+											<strong>Create</strong> an account.
+										</h2>
+										<div class="form-group">
+											<input class="form-control" type="text" name="fullName"
+												placeholder="Full Name">
+										</div>
+										<div class="form-group">
+											<input class="form-control" type="email" name="email"
+												placeholder="Email">
+										</div>
+										<div class="form-group">
+											<input class="form-control" type="text"
+												name="password" placeholder="Phone Number">
+										</div>
+										<div class="form-group">
+											<input class="form-control" type="text"
+												name="password" placeholder="Address">
+										</div>
+										<div class="form-group">
+											<input class="form-control" type="password" name="password"
+												placeholder="Password">
+										</div>
+										
+										<div class="form-group">
+											<div class="form-check">
+												<label class="form-check-label"><input
+													class="form-check-input" type="checkbox">I agree to
+													the license terms.</label>
+											</div>
+										</div>
+										<div class="form-group text-center ">
+											<a class="btn btn-primary btn-block col-lg-12" type="submit">Sign Up</a>
+										</div>
+										<a th:href="@{/login}" class="already"> <strong>You already have an account? Login here.</strong> </a>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+
+</body>
+</html>
